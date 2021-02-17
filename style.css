@@ -400,9 +400,12 @@ main a:hover {
   display: flex;
   flex-direction: column;
   height: 500px;
+  width: 100%;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 100%;
+}
+#activités .title {
+  padding-left: 5px;
 }
 #activités .box {
   display: flex;
@@ -411,6 +414,7 @@ main a:hover {
   justify-content: space-between;
   height: 450px;
   width: 100%;
+  margin-left: 5px;
 }
 #activités .card-title {
   display: flex;
@@ -423,7 +427,9 @@ main a:hover {
 }
 #activités a {
   width: 23%;
+  margin-right: 35px;
 }
+
 #activités .card {
   width: 100%;
 }
@@ -433,7 +439,6 @@ main a:hover {
   border-radius: 20px 20px 20px 20px;
   background-color: white;
   box-shadow: 5px 5px 5px #f2f2f2;
-  margin-right: auto;
 }
 #card1 img,
 #card4 img {
@@ -447,7 +452,7 @@ main a:hover {
   border-radius: 20px 20px 20px 20px;
   background-color: white;
   box-shadow: 5px 5px 5px #f2f2f2;
-  margin-right: auto;
+  
 }
 #card2 img {
   height: 179px;
@@ -461,7 +466,7 @@ main a:hover {
   margin-top: 40px;
   background-color: white;
   box-shadow: 5px 5px 5px #f2f2f2;
-  margin-right: auto;
+  
 }
 #card3 img {
   height: 105.1px;
@@ -505,19 +510,21 @@ footer {
 .foot {
   padding: 0 20px 15px 25px;
 }
-.foot span a {
+.foot ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.foot li a {
   font-size: 0.8em;
   color: black;
 }
-.foot a:link {
+.foot li a:link {
   text-decoration: none;
 }
-.foot span a:hover {
+.foot li a:hover {
   color: #0065fc;
 }
-h5 {
-  margin-bottom: 5px;
-}
+
 
 /* Responsive media */
 @media screen and (max-width: 1370px) {
@@ -585,10 +592,15 @@ h5 {
   #activités {
     height: 100%;
     width: 95%;
-    margin: 5px;
+  }
+  #activités .box {
+    width: 100%;
+  }  
 }
-#activités .box {
-  width: 100%;
+@media screen and (max-width: 980px) {
+  #activités .card-title {
+    font-size: 0.9em;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -645,9 +657,9 @@ h5 {
     height: 100%;
   }
   #activités a {
-    width: 45%;
+    width: 44%;
     height: 195px;
-    margin: 10px;
+    margin: 15px;
   }
   #activités .card {
     height: 100%;
@@ -656,10 +668,8 @@ h5 {
   #activités img {
     height: 131.5px;
   }
-  /* Footer -768px */
-  .foot span a {
-    font-size: 0.7em;
-  }
+  #activités .card-title {
+    font-size: 1em;
   }
 @media screen and (max-width: 600px) {
   body {
@@ -753,8 +763,5 @@ h5 {
   }
   .foot {
     padding: 0 0 0 10px;
-  }
-  .foot span a {
-    font-size: 0.6em;
   }
 }}
